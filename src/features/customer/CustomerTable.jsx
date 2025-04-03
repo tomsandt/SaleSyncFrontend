@@ -32,7 +32,7 @@ export default function CustomerTable() {
     return (
         <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center", overflow: "auto" }}>
             <Box sx={{ width: "93%", maxHeight: "89%" }}>
-                <PageHeader title="Deploymenttt" onAdd={() => setOpen(true)} />
+                <PageHeader title="Deploymenttttttt" onAdd={() => setOpen(true)} />
                 <GridTable endpoint="customers" columns={columns} />
                 <CreateModal open={open} onClose={() => setOpen(false)} onSave={handleSave} fields={fields} />
             </Box>
