@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "first_name": "Max",
+    "last_name": "Müller",
+    "street": "Hauptstraße 12",
+    "zip_code": "10115",
+    "city": "Berlin",
+    "email": "max.mueller@example.com",
+    "phone": "+49 151 12345678"
+  },
+  {
+    "id": 2,
+    "first_name": "Julia",
+    "last_name": "Schmidt",
+    "street": "Bergstraße 45",
+    "zip_code": "80331",
+    "city": "München",
+    "email": "julia.schmidt@example.com",
+    "phone": "+49 152 98765432"
+  },
+  {
+    "id": 3,
+    "first_name": "Lukas",
+    "last_name": "Weber",
+    "street": "Dorfstraße 3",
+    "zip_code": "04109",
+    "city": "Leipzig",
+    "email": "lukas.weber@example.com",
+    "phone": "+49 160 5551234"
+  },
+  {
+    "id": 4,
+    "first_name": "Hanna",
+    "last_name": "Lehmann",
+    "street": "Musterweg 22",
+    "zip_code": "50667",
+    "city": "Köln",
+    "email": "hanna.lehmann@example.com",
+    "phone": "+49 171 6789012"
+  },
+  {
+    "id": 5,
+    "first_name": "Felix",
+    "last_name": "Richter",
+    "street": "Am Hang 7",
+    "zip_code": "70173",
+    "city": "Stuttgart",
+    "email": "felix.richter@example.com",
+    "phone": "+49 176 34567890"
+  },
+  {
+    "id": 6,
+    "first_name": "Anna",
+    "last_name": "Bauer",
+    "street": "Parkallee 10",
+    "zip_code": "30159",
+    "city": "Hannover",
+    "email": "anna.bauer@example.com",
+    "phone": "+49 179 1239876"
+  },
+  {
+    "id": 7,
+    "first_name": "Jonas",
+    "last_name": "Krause",
+    "street": "Goethestraße 18",
+    "zip_code": "86150",
+    "city": "Augsburg",
+    "email": "jonas.krause@example.com",
+    "phone": "+49 151 9998887"
+  },
+  {
+    "id": 8,
+    "first_name": "Sophie",
+    "last_name": "Maier",
+    "street": "Kirchweg 5",
+    "zip_code": "28195",
+    "city": "Bremen",
+    "email": "sophie.maier@example.com",
+    "phone": "+49 170 2345678"
+  },
+  {
+    "id": 9,
+    "first_name": "Tom",
+    "last_name": "Schneider",
+    "street": "Rosenstraße 33",
+    "zip_code": "01067",
+    "city": "Dresden",
+    "email": "tom.schneider@example.com",
+    "phone": "+49 175 11223344"
+  },
+  {
+    "id": 10,
+    "first_name": "Laura",
+    "last_name": "Wagner",
+    "street": "Schillerstraße 9",
+    "zip_code": "55116",
+    "city": "Mainz",
+    "email": "laura.wagner@example.com",
+    "phone": "+49 172 9876543"
+  },
+  {
+    "id": 11,
+    "first_name": "Kevin",
+    "last_name": "Huber",
+    "street": "Birkenweg 77",
+    "zip_code": "40213",
+    "city": "Düsseldorf",
+    "email": "kevin.huber@example.com",
+    "phone": "+49 178 6677889"
+  },
+  {
+    "id": 12,
+    "first_name": "Mia",
+    "last_name": "Becker",
+    "street": "Wiesenstraße 20",
+    "zip_code": "90402",
+    "city": "Nürnberg",
+    "email": "mia.becker@example.com",
+    "phone": "+49 173 4455667"
+  },
+  {
+    "id": 13,
+    "first_name": "Fabian",
+    "last_name": "Neumann",
+    "street": "Lindenstraße 8",
+    "zip_code": "74072",
+    "city": "Heilbronn",
+    "email": "fabian.neumann@example.com",
+    "phone": "+49 176 7788990"
+  },
+  {
+    "id": 14,
+    "first_name": "Clara",
+    "last_name": "Schulz",
+    "street": "Marktplatz 1",
+    "zip_code": "10178",
+    "city": "Berlin",
+    "email": "clara.schulz@example.com",
+    "phone": "+49 151 1122334"
+  },
+  {
+    "id": 15,
+    "first_name": "Julian",
+    "last_name": "Lange",
+    "street": "Seestraße 14",
+    "zip_code": "93047",
+    "city": "Regensburg",
+    "email": "julian.lange@example.com",
+    "phone": "+49 179 3344556"
+  },
+  {
+    "id": 16,
+    "first_name": "Katharina",
+    "last_name": "Mayer",
+    "street": "Bachstraße 12",
+    "zip_code": "86152",
+    "city": "Augsburg",
+    "email": "katharina.mayer@example.com",
+    "phone": "+49 177 5566778"
+  },
+  {
+    "id": 17,
+    "first_name": "David",
+    "last_name": "König",
+    "street": "Ringstraße 21",
+    "zip_code": "28195",
+    "city": "Bremen",
+    "email": "david.koenig@example.com",
+    "phone": "+49 152 6677889"
+  },
+  {
+    "id": 18,
+    "first_name": "Nina",
+    "last_name": "Stein",
+    "street": "Turmstraße 50",
+    "zip_code": "20095",
+    "city": "Hamburg",
+    "email": "nina.stein@example.com",
+    "phone": "+49 155 2233445"
+  },
+  {
+    "id": 19,
+    "first_name": "Patrick",
+    "last_name": "Schmitt",
+    "street": "Kaiserstraße 6",
+    "zip_code": "60311",
+    "city": "Frankfurt am Main",
+    "email": "patrick.schmitt@example.com",
+    "phone": "+49 160 4455667"
+  },
+  {
+    "id": 20,
+    "first_name": "Sophia",
+    "last_name": "Hartmann",
+    "street": "Westendstraße 18",
+    "zip_code": "70176",
+    "city": "Stuttgart",
+    "email": "sophia.hartmann@example.com",
+    "phone": "+49 157 7788990"
+  }
+]
