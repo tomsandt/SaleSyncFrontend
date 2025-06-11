@@ -19,9 +19,9 @@ const menuItems = [
     { text: "Dashboard", icon: <DashboardOutlinedIcon />, path: "/" },
     { text: "Customer", icon: <GroupOutlinedIcon />, path: "/customer" },
     { text: "Dealer", icon: <StorefrontOutlinedIcon />, path: "/dealer" },
-    { text: "Inventory", icon: <Inventory2OutlinedIcon />, path: "/inventory" },
+    { text: "Inventory", icon: <Inventory2OutlinedIcon />, path: "/article" },
     { text: "Purchase", icon: <ShoppingCartOutlinedIcon />, path: "/purchase" },
-    { text: "Sales", icon: <AttachMoneyOutlinedIcon />, path: "/sales" },
+    { text: "Sales", icon: <AttachMoneyOutlinedIcon />, path: "/sale" },
 ];
 
 export default function Sidebar() {
