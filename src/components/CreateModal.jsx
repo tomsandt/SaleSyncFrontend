@@ -9,13 +9,28 @@ export default function createModal({ open, onClose, onSave, fields }) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
-    const handleSave = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
         onSave(formData);
         onClose();
     };
 
     return (
-        <Dialog open={open} onClose={onClose}>
+        <Dialog
+            open={open}
+            onClose={onClose}
+            slotProps={{
+                paper: {
+                    component: 'form',
+                    onSubmit: handleSubmit,
+                },
+            }}
+        >
             <DialogTitle>Add new Customer</DialogTitle>
             <DialogContent>
                 {fields.map((field) => (
@@ -26,12 +41,13 @@ export default function createModal({ open, onClose, onSave, fields }) {
                         fullWidth
                         margin="dense"
                         onChange={handleChange}
+                        required={true}
                     />
                 ))}
             </DialogContent>
             <DialogActions>
                 <Button onClick={onClose} color="secondary">Cancel</Button>
-                <Button onClick={handleSave} color="primary">Save</Button>
+                <Button type="submit" color="primary">Save</Button>
             </DialogActions>
         </Dialog>
     )
