@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8080/frontend/v1';
+const BASE_URL = '/frontend/v1';
 
 export async function fetchData(endpoint) {
     const response = await fetch(`${BASE_URL}/${endpoint}`)
