@@ -8,13 +8,13 @@ import SaveIcon from '@mui/icons-material/Save';
 import CancelIcon from '@mui/icons-material/Cancel';
 import {deleteData, fetchData, updateData} from "@/services/apiService";
 
-export default function GridTable({ endpoint, columns }) {
+export default function GridTable({ columns, fetchObj, updateObj, deleteObj }) {
     const [rows, setRows] = useState([]);
     const [rowMode, setRowMode] = useState({});
 
     useEffect(() => {
-        fetchData(endpoint).then(setRows);
-    }, [endpoint]);
+        fetchObj().then(setRows);
+    }, [fetchObj]);
 
     const handleEditClick = (id) => () => {
         setRowMode({ ...rowMode, [id]: { mode: GridRowModes.Edit } });
@@ -22,12 +22,12 @@ export default function GridTable({ endpoint, columns }) {
 
     const handleSaveClick = (id) => async () => {
         const updatedRow = rows.find((row) => row.id === id);
-        await updateData(endpoint, id, updatedRow);
+        await updateObj(id, updatedRow);
         setRowMode({ ...rowMode, [id]: { mode: GridRowModes.View } });
     };
 
     const handleDeleteClick = (id) => async () => {
-        await deleteData(endpoint, id);
+        await deleteObj(id);
         setRows((prevRows) => prevRows.filter((row) => row.id !== id));
     };
 
@@ -39,7 +39,7 @@ export default function GridTable({ endpoint, columns }) {
     };
 
     const processRowUpdate = async (newRow) => {
-        await updateData(endpoint, newRow.id, newRow);
+        await updateObj(newRow.id, newRow);
         return newRow;
     };
 

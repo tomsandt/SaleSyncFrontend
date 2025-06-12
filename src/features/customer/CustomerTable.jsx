@@ -4,8 +4,8 @@ import GridTable from "@/components/GridTable";
 import { Box } from "@mui/material";
 import PageHeader from "@/components/PageHeader";
 import {useState} from "react";
-import {addData} from "@/services/apiService";
 import CreateModal from "@/components/CreateModal";
+import {addCustomer, deleteCustomers, fetchCustomers, updateCustomers} from "@/features/customer/customerService";
 
 const columns = [
     { field: "id", headerName: "ID", width: 100 },
@@ -24,7 +24,7 @@ export default function CustomerTable() {
     const [open, setOpen] = useState(false);
 
     const handleSave = async (data) => {
-        await addData("customers", data);
+        await addCustomer(data);
         setOpen(false);
         window.location.reload();
     }
@@ -33,7 +33,12 @@ export default function CustomerTable() {
         <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center", overflow: "auto" }}>
             <Box sx={{ width: "93%", maxHeight: "89%" }}>
                 <PageHeader title="Customer" onAdd={() => setOpen(true)} />
-                <GridTable endpoint="customers" columns={columns} />
+                <GridTable
+                    columns={columns}
+                    fetchObj={fetchCustomers}
+                    updateObj={updateCustomers}
+                    deleteObj={deleteCustomers}
+                />
                 <CreateModal open={open} onClose={() => setOpen(false)} onSave={handleSave} fields={fields} />
             </Box>
         </Box>
