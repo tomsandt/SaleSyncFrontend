@@ -6,6 +6,11 @@ import PageHeader from "@/components/PageHeader";
 import {useState} from "react";
 import {addData} from "@/services/apiService";
 import CreateModal from "@/components/CreateModal";
+import {
+    deleteArticle,
+    fetchArticles,
+    updateArticle,
+} from "@/features/article/articleService";
 
 const columns = [
     { field: "id", headerName: "ID", width: 100 },
@@ -15,7 +20,7 @@ const columns = [
     { field: "description", headerName: "Description", width: 150, editable: true },
 ];
 
-const fields = ["type", "dealerId", "name", "description"]
+const fields = ["Type", "Dealer ID", "Name", "Description"]
 
 export default function ArticleTable() {
     const [open, setOpen] = useState(false);
@@ -30,7 +35,12 @@ export default function ArticleTable() {
         <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center", overflow: "auto" }}>
             <Box sx={{ width: "93%", maxHeight: "89%" }}>
                 <PageHeader title="Article" onAdd={() => setOpen(true)} />
-                <GridTable endpoint="articles" columns={columns} />
+                <GridTable
+                    columns={columns}
+                    fetchObj={fetchArticles}
+                    updateObj={updateArticle}
+                    deleteObj={deleteArticle}
+                />
                 <CreateModal open={open} onClose={() => setOpen(false)} onSave={handleSave} fields={fields} />
             </Box>
         </Box>

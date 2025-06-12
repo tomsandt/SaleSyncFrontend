@@ -1,6 +1,6 @@
 import {addData, deleteData, fetchData, updateData} from "@/services/apiService";
 
-export const fetchDealers = () => fetchData("dealers");
-export const updateDealers = (id, data) => updateData("dealers", id, data);
-export const deleteDealers = (id) => deleteData("dealers", id);
-export const addDealer = (data) => addData("dealers", data);
+export const fetchDealers = () => fetchData("dealer");
+export const updateDealer = (id, data) => updateData("dealer", id, data);
+export const deleteDealer = (id) => deleteData("dealer", id);
+export const addDealer = (data) => addData("dealer", data);

@@ -6,6 +6,7 @@ import PageHeader from "@/components/PageHeader";
 import {useState} from "react";
 import {addData} from "@/services/apiService";
 import CreateModal from "@/components/CreateModal";
+import {deletePurchase, fetchPurchases, updatePurchase} from "@/features/purchase/purchaseService";
 
 const columns = [
     { field: "id", headerName: "ID", width: 100 },
@@ -19,7 +20,7 @@ const columns = [
     { field: "tax", headerName: "Tax", width: 150, editable: true },
 ];
 
-const fields = ["type", "articleId", "status", "amount", "date", "price", "shipping", "tax"]
+const fields = ["Type", "Article ID", "Status", "Amount", "Date", "Price", "Shipping", "Tax"]
 
 export default function PurchaseTable() {
     const [open, setOpen] = useState(false);
@@ -34,7 +35,12 @@ export default function PurchaseTable() {
         <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center", overflow: "auto" }}>
             <Box sx={{ width: "93%", maxHeight: "89%" }}>
                 <PageHeader title="Purchase" onAdd={() => setOpen(true)} />
-                <GridTable endpoint="purchases" columns={columns} />
+                <GridTable
+                    columns={columns}
+                    fetchObj={fetchPurchases}
+                    updateObj={updatePurchase}
+                    deleteObj={deletePurchase}
+                />
                 <CreateModal open={open} onClose={() => setOpen(false)} onSave={handleSave} fields={fields} />
             </Box>
         </Box>

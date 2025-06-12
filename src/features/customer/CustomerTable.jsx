@@ -5,7 +5,12 @@ import { Box } from "@mui/material";
 import PageHeader from "@/components/PageHeader";
 import {useState} from "react";
 import CreateModal from "@/components/CreateModal";
-import {addCustomer, deleteCustomers, fetchCustomers, updateCustomers} from "@/features/customer/customerService";
+import {
+    addCustomer,
+    deleteCustomer,
+    fetchCustomers,
+    updateCustomer,
+} from "@/features/customer/customerService";
 
 const columns = [
     { field: "id", headerName: "ID", width: 100 },
@@ -36,8 +41,8 @@ export default function CustomerTable() {
                 <GridTable
                     columns={columns}
                     fetchObj={fetchCustomers}
-                    updateObj={updateCustomers}
-                    deleteObj={deleteCustomers}
+                    updateObj={updateCustomer}
+                    deleteObj={deleteCustomer}
                 />
                 <CreateModal open={open} onClose={() => setOpen(false)} onSave={handleSave} fields={fields} />
             </Box>
