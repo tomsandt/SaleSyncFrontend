@@ -6,7 +6,7 @@ import PageHeader from "@/components/PageHeader";
 import {useState} from "react";
 import {addData} from "@/services/apiService";
 import CreateModal from "@/components/CreateModal";
-import {deleteSale, fetchSales, updateSale} from "@/features/sale/saleService";
+import {addSale, deleteSale, fetchSales, updateSale} from "@/features/sale/saleService";
 
 const columns = [
     { field: "id", headerName: "ID", width: 100 },
@@ -26,7 +26,7 @@ export default function SaleTable() {
     const [open, setOpen] = useState(false);
 
     const handleSave = async (data) => {
-        await addData("sales", data);
+        await addSale(data);
         setOpen(false);
         window.location.reload();
     }

@@ -6,7 +6,7 @@ import PageHeader from "@/components/PageHeader";
 import {useState} from "react";
 import {addData} from "@/services/apiService";
 import CreateModal from "@/components/CreateModal";
-import {deletePurchase, fetchPurchases, updatePurchase} from "@/features/purchase/purchaseService";
+import {addPurchase, deletePurchase, fetchPurchases, updatePurchase} from "@/features/purchase/purchaseService";
 
 const columns = [
     { field: "id", headerName: "ID", width: 100 },
@@ -26,7 +26,7 @@ export default function PurchaseTable() {
     const [open, setOpen] = useState(false);
 
     const handleSave = async (data) => {
-        await addData("purchases", data);
+        await addPurchase(data);
         setOpen(false);
         window.location.reload();
     }

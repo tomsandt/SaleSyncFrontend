@@ -7,6 +7,7 @@ import {useState} from "react";
 import {addData} from "@/services/apiService";
 import CreateModal from "@/components/CreateModal";
 import {
+    addArticle,
     deleteArticle,
     fetchArticles,
     updateArticle,
@@ -26,7 +27,7 @@ export default function ArticleTable() {
     const [open, setOpen] = useState(false);
 
     const handleSave = async (data) => {
-        await addData("article", data);
+        await addArticle(data);
         setOpen(false);
         window.location.reload();
     }

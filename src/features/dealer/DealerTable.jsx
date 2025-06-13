@@ -6,7 +6,7 @@ import PageHeader from "@/components/PageHeader";
 import {useState} from "react";
 import {addData} from "@/services/apiService";
 import CreateModal from "@/components/CreateModal";
-import {deleteDealer, fetchDealers, updateDealer} from "@/features/dealer/dealerService";
+import {addDealer, deleteDealer, fetchDealers, updateDealer} from "@/features/dealer/dealerService";
 
 const columns = [
     { field: "id", headerName: "ID", width: 100 },
@@ -25,7 +25,7 @@ export default function CustomerTable() {
     const [open, setOpen] = useState(false);
 
     const handleSave = async (data) => {
-        await addData("dealers", data);
+        await addDealer(data);
         setOpen(false);
         window.location.reload();
     }
