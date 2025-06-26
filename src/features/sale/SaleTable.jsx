@@ -20,7 +20,16 @@ const columns = [
     { field: "tax", headerName: "Tax", width: 150, editable: true },
 ];
 
-const fields = ["Customer ID", "Article ID", "Status", "Amount", "Date", "Price", "Fee", "Tax"]
+const fields = [
+    { name: "customerId", label: "Customer ID" },
+    { name: "articleId",  label: "Article ID"  },
+    { name: "status",     label: "Status"      },
+    { name: "amount",     label: "Amount"      },
+    { name: "date",       label: "Date"        },
+    { name: "price",      label: "Price"       },
+    { name: "fee",        label: "Fee"         },
+    { name: "tax",        label: "Tax"         },
+];
 
 export default function SaleTable() {
     const [open, setOpen] = useState(false);

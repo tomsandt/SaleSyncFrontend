@@ -20,7 +20,16 @@ const columns = [
     { field: "tax", headerName: "Tax", width: 150, editable: true },
 ];
 
-const fields = ["Type", "Article ID", "Status", "Amount", "Date", "Price", "Shipping", "Tax"]
+const fields = [
+    { name: "type",      label: "Type"       },
+    { name: "articleId", label: "Article ID" },
+    { name: "status",    label: "Status"     },
+    { name: "amount",    label: "Amount"     },
+    { name: "date",      label: "Date"       },
+    { name: "price",     label: "Price"      },
+    { name: "shipping",  label: "Shipping"   },
+    { name: "tax",       label: "Tax"        },
+];
 
 export default function PurchaseTable() {
     const [open, setOpen] = useState(false);

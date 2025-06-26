@@ -21,7 +21,12 @@ const columns = [
     { field: "description", headerName: "Description", width: 150, editable: true },
 ];
 
-const fields = ["Type", "Dealer ID", "Name", "Description"]
+const fields = [
+    { name: "type",        label: "Type"        },
+    { name: "dealerId",    label: "Dealer ID"   },
+    { name: "name",        label: "Name"        },
+    { name: "description", label: "Description" },
+];
 
 export default function ArticleTable() {
     const [open, setOpen] = useState(false);
