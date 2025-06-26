@@ -23,7 +23,15 @@ const columns = [
     { field: "phone", headerName: "Phone", width: 150, editable: true },
 ];
 
-const fields = ["First name", "Last name", "Street", "ZIP", "City", "Mail", "Phone"]
+const fields = [
+    { name: "firstName", label: "First name" },
+    { name: "lastName",  label: "Last name"  },
+    { name: "street",    label: "Street"     },
+    { name: "zipCode",   label: "ZIP Code"   },
+    { name: "city",      label: "City"       },
+    { name: "mail",      label: "Mail"       },
+    { name: "phone",     label: "Phone"      },
+];
 
 export default function CustomerTable() {
     const [open, setOpen] = useState(false);
