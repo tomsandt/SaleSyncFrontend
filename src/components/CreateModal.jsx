@@ -33,11 +33,11 @@ export default function createModal({ open, onClose, onSave, fields }) {
         >
             <DialogTitle>Add new Customer</DialogTitle>
             <DialogContent>
-                {fields.map((field) => (
+                {fields.map(({ name, label }) => (
                     <TextField
-                        key={field}
-                        label={field}
-                        name={field}
+                        key={name}
+                        label={label}
+                        name={name}
                         fullWidth
                         margin="dense"
                         onChange={handleChange}
